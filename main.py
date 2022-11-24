@@ -26,7 +26,10 @@ def start():
     # print(phone_pools)
     # print(output[23:])
 
-#testing_changes_in_git
+
+def dummy_func(name):
+    """Testing changes in git"""
+    return f'{name} was here'
 
 if __name__ == '__main__':
     try:
