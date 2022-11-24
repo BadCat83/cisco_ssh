@@ -26,8 +26,6 @@ def start():
     # print(phone_pools)
     # print(output[23:])
 
-#testing_changes_in_git
-
 if __name__ == '__main__':
     try:
         start()
