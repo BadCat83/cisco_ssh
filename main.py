@@ -26,6 +26,7 @@ def start():
     # print(phone_pools)
     # print(output[23:])
 
+print('dafcasvsa')
 
 if __name__ == '__main__':
     try:
