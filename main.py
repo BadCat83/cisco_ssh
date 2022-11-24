@@ -26,8 +26,6 @@ def start():
     # print(phone_pools)
     # print(output[23:])
 
-def func():
-    pass
 
 if __name__ == '__main__':
     try:
