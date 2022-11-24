@@ -28,6 +28,7 @@ def start():
 
 def fu():
     pass
+print('dgdfg')
 
 if __name__ == '__main__':
     try:
