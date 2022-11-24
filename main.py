@@ -27,13 +27,6 @@ def start():
     # print(output[23:])
 
 
-def dummy_func(name):
-    """Testing changes in git"""
-    return f'{name} was here'
-
-def func():
-    pass
-
 if __name__ == '__main__':
     try:
         start()
