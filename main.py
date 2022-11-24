@@ -28,8 +28,6 @@ def start():
 
 def fu():
     pass
-print('dgdfg')
-#fgwerg
 
 if __name__ == '__main__':
     try:
