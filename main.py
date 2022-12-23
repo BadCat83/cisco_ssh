@@ -9,9 +9,17 @@ def analyze_pool(info):
         for index, info in enumerate(pool):
             if PARAM in info:
                 name = pool[index].split('-', 1)[1]
-                if (host := pool[index + 1]).__contains__('host'):
-                    if (mac := pool[index + 2]).__contains__('client-identifier'):
+
+
+                """ зачем __contains__ вызывать вне класса, когда можно проверить in-ом?"""
+
+                if 'host' in (host := pool[index + 1]):
+                    if 'client-identifier' in (mac := pool[index + 2]):
                         f.write(name + host + mac + '\n')
+
+                # if (host := pool[index + 1]).__contains__('host'):
+                #     if (mac := pool[index + 2]).__contains__('client-identifier'):
+                #         f.write(name + host + mac + '\n')
 
 
 def start():
