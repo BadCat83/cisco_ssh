@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{% static 'table/css/styles.css' %}" type="text/css">
+    <link rel="shortcut icon" href="{% static 'table/images/greenway.ico' %}" type="image/x-icon"/>
+</head>
+<body>
+    {% block mainmenu %}
+        <div class="header">
+			<ul id="mainmenu" class="mainmenu">
+			<li class="logo"><a href="{% url 'home' %}"><div class="logo"></div></a></li>
+				{% if request.user.is_authenticated %}
+				{% for item in menu %}
+					<li><a href="{% url item.url_name %}">{{item.title}}</a></li>
+				{% endfor %}
+
+					<li class="last">
+						{{ user.username }} | <a href="{% url 'logout' %}">Выйти</a>
+					</li>
+				{% endif %}
+			</ul>
+			<div class="clear"></div>
+		</div>
+    {% endblock mainmenu %}
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
